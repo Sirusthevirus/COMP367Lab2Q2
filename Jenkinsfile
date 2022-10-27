@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-    maven "apache-maven"
+    maven "MAVEN"
     jdk "JDK"
     }
     
@@ -15,9 +15,7 @@ pipeline {
         }
     stage('Maven Build') {
     steps {
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
-    bat "mvn clean compile"
+			bat "mvn clean compile"
             }
         }
     }
